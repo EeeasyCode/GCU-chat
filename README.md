@@ -3,6 +3,8 @@
 ---
 
 <br/><br/>
+![학교마크] (image/gachon.png)
+![챗봇 채널] (image/kakao-channel.png)
 
 ## 🗣 기능 소개
 
