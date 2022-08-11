@@ -3,8 +3,8 @@
 ---
 
 <br/><br/>
-![학교마크] (image/gachon.png)
-
+<img src="image/gachon.png" width=207>
+<img src="image/kakao-channel.png" width=300 height=200>
 
 ## 🗣 기능 소개
 
