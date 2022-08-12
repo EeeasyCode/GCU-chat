@@ -35,14 +35,11 @@ deploy:
   - provider: codedeploy
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
-
     bucket: gcu-build-bucket
     key: gcu-build-bucket.zip
-
     bundle_type: zip
     application: gcu-server
-
-    deplyment_group: gcu-server-group
+    deployment_group: gcu-server-group
     region: ap-northeast-2
     wait-until-deployed: true
 
