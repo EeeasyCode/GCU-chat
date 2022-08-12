@@ -14,6 +14,9 @@
 
 <br/><br/>
 
+### 서버 flow
+<img src="image/serverflow.png">
+
 ## 🛠 기술 스택
 ```
 Language : 
