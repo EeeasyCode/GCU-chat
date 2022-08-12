@@ -1,20 +1,37 @@
 language: java
 jdk:
-- openjdk17
+  - openjdk17
+
 branches:
   only:
-  - master
+    - master
+
 before_install:
-- chmod +x gradlew
+  - chmod +x gradlew
+
 cache:
   directories:
-  - "$HOME/.m2/repository"
-  - "$HOME/.gradle"
+    - "$HOME/.m2/repository"
+    - "$HOME/.gradle"
+
 script: "./gradlew clean build"
+
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: gcu-build-bucket
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private
+    local_dir: deploy
+    wait_until_deployed : true
+
 notifications:
   email:
     recipients:
-    - eeeasycode@gmail.com
+      - eeeasycode@gmail.com
+
 notification:
   slack:
     secure: lq4tBFpYRPKYUL7SwbZPIzWkqlH7kSYykLVFoGodukCXBJK0gQXc4GZ8FBauSz9xK/BjhvYua9BLssoNBSmdeBrwdUE3R6BrpxEJsXKrPC8AyuISibqcP6u96ENL9FJjcgjapD4n+KIZV8lIAQSq+K/Obf9CcJs2v+q4/P5vXeUbBFpqpcoc+UsuFgoaqd9ETfd6fPk0MGHDlhCd6ct2mtOvsLxd8i0OcdIZr1qLPRuw+lbXapjQ1jdmilvPtuPhUzISbRjSNl2xqYLzAkXhSveSo67s73CdtFTH//LUr4PCJncGVONQ2XYK0cRlPjhrFwyhNkR4Cshshk47WsFriL2vxhtsYeLeKvvVZBzb2fq8TCfddhO/z0F9PE1shvuUJ6Qdt/rzPa+lCjf8rqr8RN5njq7bOVXfOOlw52R/yycxhV7IZlrIcAYFqKUIabpQzj4iJaj+9swqLxFtHewuS/5Rtyv/7HlTKN+uZuAj+Pb+kYHOO0igpNnyCdseED5yRCshXEgUvMt5uj3QWsuD7jUa10hSYkeHsiyQincaDEh2ngjgVMfQy07LMLEr3ppP4+1appstvVckXu/BdAiz6ThIXlgzTzvRuVkYBwYvlOty1Mm7/ImYOPBE9Ukp4K4QXXlHmoYZHHIkh13M2D5PfdHFsmKRKWRBy+AI4RhqD30=
