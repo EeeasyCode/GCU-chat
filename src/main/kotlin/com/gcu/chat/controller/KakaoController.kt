@@ -1,10 +1,7 @@
 package com.gcu.chat.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
@@ -12,6 +9,11 @@ import javax.servlet.http.HttpServletResponse
 @RestController
 class KakaoController {
     //카카오톡 오픈빌더로 리턴할 스킬 API
+    // test API
+    @GetMapping("/hello")
+    fun hello(): String {
+        return "hello"
+    }
     @RequestMapping(
         value = ["/kkoChat/v1"],
         method = [RequestMethod.POST, RequestMethod.GET],
