@@ -2,9 +2,20 @@
 version: 0.0
 os: linux
 files:
-  # 2
   - source:  /
-    # 3
     destination: /home/ec2-user/app/step2/zip/
-    # 4
     overwrite: yes
+
+# 1
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+
+# 2
+hooks:
+  ApplicationStart:
+    - location: deploy.sh
+      timeout: 60
+      runas: ec2-user
