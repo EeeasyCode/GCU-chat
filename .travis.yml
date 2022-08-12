@@ -5,6 +5,7 @@ jdk:
 
 # 어느 브랜치가 push 될 때 수행할지 지정한다.
 # 오직 master 브랜치가 push될 때 수행하도록 지정하였다.
+# except 설정도 가능
 branches:
   only:
     - master
