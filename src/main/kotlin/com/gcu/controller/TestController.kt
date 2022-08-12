@@ -1,6 +1,7 @@
 package com.gcu.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
@@ -10,6 +11,11 @@ import javax.servlet.http.HttpServletResponse
 
 @RestController
 class TestController {
+    // test API
+    @GetMapping("/hello")
+    fun hello(): String {
+        return "hello"
+    }
     //카카오톡 오픈빌더로 리턴할 스킬 API
     @RequestMapping(
         value = ["/kkoChat/v1"],
