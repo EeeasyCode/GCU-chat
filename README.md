@@ -19,11 +19,11 @@
 
 ## 🛠 기술 스택
 ```
-Language : 
-Frameworks :
+Language : Kotlin
+Frameworks : Spring Boot
 DB : 
 AWS : 
-CI/CD : 
-Version control : 
+CI/CD : Travis CI / AWS Code Deploy
+Version control : GIT
 Issue Tracker :
 ```
