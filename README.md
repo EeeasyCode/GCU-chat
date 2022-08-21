@@ -21,8 +21,8 @@
 ```
 Language : Kotlin
 Frameworks : Spring Boot
-DB : 
-AWS : 
+DB : MySQL
+AWS : EC2, Code Deploy
 CI/CD : Travis CI / AWS Code Deploy
 Version control : GIT
 Issue Tracker :
