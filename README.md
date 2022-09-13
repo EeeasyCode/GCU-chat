@@ -27,3 +27,4 @@ CI/CD : Travis CI / AWS Code Deploy
 Version control : GIT
 Issue Tracker :
 ```
+크롤링 서버 파이썬 OR 코틀린 사용할지 결정하기
